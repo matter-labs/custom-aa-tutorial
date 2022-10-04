@@ -24,7 +24,7 @@ contract TwoUserMultisig is IAccount, IERC1271 {
 
 	modifier onlyBootloader() {
 		require(msg.sender == BOOTLOADER_FORMAL_ADDRESS, "Only bootloader can call this method");
-		// Continure execution if called from the bootloader.
+		// Continue execution if called from the bootloader.
 		_;
 	}
 

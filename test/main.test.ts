@@ -42,7 +42,7 @@ describe("Tests for Factory Multisig AA", function () {
     expect(aaFactoryAddress).to.not.equal(DEFAULT_ADDRESS);
   });
 
-  it("Should deploy multisig by factory and signers sign trx be valid", async function () {
+  it("Should successfully deploy multisig by factory and validate signatures from signers", async function () {
     const aaFactory = new ethers.Contract(aaFactoryAddress, factoryArtifact.abi, wallet);
 
     // For the simplicity, we will use zero hash as salt

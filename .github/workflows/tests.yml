@@ -7,7 +7,7 @@ jobs:
   test:
     strategy:
       matrix:
-        platform: [ubuntu-latest] # macos-latest is not supported by docker/setup-buildx-action
+        platform: [ubuntu-latest]
     runs-on: ${{ matrix.platform }}
     steps:
       - name: Checkout branch

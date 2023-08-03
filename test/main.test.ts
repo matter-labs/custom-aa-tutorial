@@ -35,8 +35,6 @@ describe("Tests for Factory Multisig AA", function () {
     // Getting the bytecodeHash of the account
     const bytecodeHash = utils.hashBytecode(multisigArtifact.bytecode);
     const factory = await deployer.deploy(factoryArtifact, [bytecodeHash], undefined, [
-      // Since the factory requires the code of the multisig to be available,
-      // we should pass it here as well.
       multisigArtifact.bytecode,
     ]);
     logCyan(`AA factory address: ${factory.address}`);

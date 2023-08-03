@@ -45,7 +45,6 @@ describe("Tests for Factory Multisig AA", function () {
   });
 
   it("Should deploy multisig by factory and signers sign trx be valid", async function () {
-    // Private key of the account used to deploy
     const aaFactory = new ethers.Contract(aaFactoryAddress, factoryArtifact.abi, wallet);
 
     // For the simplicity, we will use zero hash as salt

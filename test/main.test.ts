@@ -71,7 +71,6 @@ describe("Tests for Factory Multisig AA", function () {
     // Transaction to deploy a new account to the multisig we just deployed
     let aaTx = await aaFactory.populateTransaction.deployAccount(
       salt,
-      // These are accounts that will own the newly deployed account
       Wallet.createRandom().address,
       Wallet.createRandom().address
     );

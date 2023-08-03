@@ -105,7 +105,6 @@ describe("Tests for Factory Multisig AA", function () {
     const sentTx = await provider.sendTransaction(utils.serialize(aaTx));
     await sentTx.wait();
 
-    // Checking that the nonce for the account has increased
     logCyan(`The multisig's nonce after the first tx is ${await provider.getTransactionCount(multisigAddress)}`);
     multisigBalance = await provider.getBalance(multisigAddress);
     logCyan(`Multisig account balance is now ${multisigBalance.toString()}`);
